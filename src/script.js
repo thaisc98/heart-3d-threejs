@@ -12,7 +12,7 @@ const scene = new THREE.Scene();
 const group = new THREE.Group();
 
 const loader = new GLTFLoader();
-loader.load('/static/assets/heart.glb', function(glb){
+loader.load('/glb/heart.glb', function(glb){
    const root = glb.scene;
    root.scale.set(20,20,20)
    root.position.y = 100
@@ -33,7 +33,7 @@ loader.load('/static/assets/heart.glb', function(glb){
 }, function(xhr){
   console.log('gtlf loader',xhr.loaded/xhr.total * 100) + "% loaded"
 }, function(error){
-  console.log(error)
+  console.log('gtlf error',error)
 })
 
 
@@ -41,7 +41,7 @@ scene.background = new THREE.Color( 0xf0f0f0 );
 
 const loaderfont = new FontLoader();
 loaderfont.load(
-	"/static/fonts/helvetiker_regular.typeface.json",  // Adjust the path based on your structure
+	"/fonts/helvetiker_regular.typeface.json",  // Adjust the path based on your structure
 	function ( font ) {
     const color = 0x006699;
 

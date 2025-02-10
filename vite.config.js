@@ -1,9 +1,14 @@
 export default {
     root: 'src',
-    publicDir: '../static/',
+    publicDir: 'public',
     base: './',
     build: {
       outDir: '../dist',
       emptyOutDir: true, 
+    },
+    server: {
+      mimeTypes: {
+        'model/gltf-binary': ['.glb'],
+      }
     }
   }
