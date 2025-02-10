@@ -23,12 +23,17 @@ loader.load('/glb/heart.glb', function(glb){
    heart2.position.y = 100
    heart2.position.x = -680
 
-   const heartlast = root.clone();
-   heartlast.scale.set(20,20,20)
-   heartlast.position.y = 100
-   heartlast.position.x = 712
+   const heartLast = root.clone();
+   heartLast.scale.set(20,20,20)
+   heartLast.position.y = 100
+   heartLast.position.x = 712
 
-   group.add(root,heart2,heartlast)
+   const heartSign = root.clone();
+   heartSign.scale.set(20,20,20)
+   heartSign.position.y = 3
+   heartSign.position.x = 835
+
+   group.add(root,heart2,heartLast,heartSign)
    scene.add(group);
 }, function(xhr){
   console.log('gtlf loader',xhr.loaded/xhr.total * 100) + "% loaded"
